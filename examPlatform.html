@@ -10,6 +10,11 @@
 
   <!-- If we want more themes, we can add them to the Tailwind config like this: -->
   <script>tailwind.config = { daisyui: { themes: ["light", "dark"] } }</script>
+  <style>
+    .step-slide { display: none !important; }
+    .step-slide.active { display: grid !important; }
+  </style>
+
 </head>
 <body>
  
@@ -31,6 +36,18 @@
     <div class="hidden lg:flex flex-none">
       <ul class="menu menu-horizontal px-1">
         <li><a href="index.html" class="font-medium">Home</a></li>
+        <li>
+          <details>
+            <summary>Projects</summary>
+            <ul class="bg-base-200 text-base-content rounded-t-none p-1 w-40">
+              <li><a href="studentConductTracker.html">Student Conduct Tracker</a></li>
+              <li><a href="predictAthlete.html">Predict Athlete Position</a></li>
+              <li><a href="webStore.html">E-Commerce Platform</a></li>
+              <li><a href="examPlatform.html">Exam Platform</a></li>
+              <li><a href="examPlatformDashboard.html">Exam Platform Dashboard</a></li>
+            </ul>
+          </details>
+        </li>
 
       </ul>
     </div>
@@ -64,17 +81,272 @@
         <li><a href="studentConductTracker.html">Student Conduct Tracker</a></li>
         <li><a href="predictAthlete.html">Predict Athlete Position</a></li>
         <li><a href="webStore.html">E-Commerce Platform</a></li>
-        <li><a href="examPlatform.html">Examination Platform</a></li>
-        <li><a href="examPlatformDashboard.html">Examination Platform Dashboard</a></li>
+        <li><a href="examPlatform.html">Exam Platform</a></li>
+        <li><a href="examPlatformDashboard.html">Exam Platform Dashboard</a></li>
 
       </ul>
     </div>
   </div>
  
   <!-- Page Content -->
-  <main class="container mx-auto px-4 py-10">
-    <h1 class="text-4xl font-bold mb-4">Exam Platform</h1>
-  </main>
+  <main class="container mx-auto px-4 py-14 max-w-5xl">
+ 
+        <!-- ── Hero: Title + About + Date ── -->
+        <div class="relative mb-16">
+          <div class="hidden lg:block absolute right-0 top-0 text-right md:block absolute right-0 top-0 text-right">
+            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
+            <p class="text-sm text-base-content/50 font-mono">5 months</p>
+          </div>
+          <h1 class="serif text-5xl font-bold mb-6 text-center">Exam Platform</h1>
+          <p class="text-center text-base-content/60 text-lg max-w-2xl mx-auto leading-relaxed" style="font-family: 'DM Serif Display', serif; font-style: italic;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+        </div>
+
+        <div class="lg:hidden md:hidden xl:hidden">
+          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
+          <p class="text-sm text-base-content/50 font-mono">5 months</p>
+        </div>
+ 
+        <!-- ── Role + Tech Stack ── -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+          <div class="card bg-base-100 shadow-none">
+            <div class="card-body">
+              <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
+              <p class="text-base-content/70 leading-relaxed">
+                Full Stack Developer. Responsible for designing the database schema, building the REST API with Flask, and implementing the frontend. Led all technical decisions throughout the project lifecycle.
+              </p>
+            </div>
+          </div>
+          <div class="card bg-base-100 shadow-none">
+            <div class="card-body">
+              <h2 class="card-title text-xl font-bold mb-3">Tech Stack</h2>
+              <div class="flex flex-wrap gap-3">
+                <div class="tooltip" data-tip="Python">
+                  <a href="https://python.org" target="_blank" class="btn btn-circle bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-7 h-7" />
+                  </a>
+                </div>
+                <div class="tooltip" data-tip="Flask">
+                  <a href="https://flask.palletsprojects.com" target="_blank" class="btn btn-circle bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" class="w-7 h-7" />
+                  </a>
+                </div>
+                <div class="tooltip" data-tip="JavaScript">
+                  <a href="https://developer.mozilla.org" target="_blank" class="btn btn-circle bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-7 h-7" />
+                  </a>
+                </div>
+                <div class="tooltip" data-tip="PostgreSQL">
+                  <a href="https://postgresql.org" target="_blank" class="btn btn-circle bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" class="w-7 h-7" />
+                  </a>
+                </div>
+                <div class="tooltip" data-tip="Git">
+                  <a href="https://git-scm.com" target="_blank" class="btn btn-circle bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-7 h-7" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- ── Key Features ── -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold mb-6">Key Features</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">User Authentication</h3>
+                <p class="text-sm text-base-content/60">Secure login and registration with session management.</p>
+              </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">Product Catalogue</h3>
+                <p class="text-sm text-base-content/60">Browse, search and filter products dynamically.</p>
+              </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">Shopping Cart</h3>
+                <p class="text-sm text-base-content/60">Add, remove, and update cart items in real time.</p>
+              </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">Order Management</h3>
+                <p class="text-sm text-base-content/60">Track orders from placement to delivery.</p>
+              </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">Admin Dashboard</h3>
+                <p class="text-sm text-base-content/60">Manage inventory, users and orders from one place.</p>
+              </div>
+            </div>
+            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">REST API</h3>
+                <p class="text-sm text-base-content/60">Full API backend powering all frontend interactions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- ── Walkthrough ── -->
+        <div class="mb-16">
+          <h2 class="text-3xl font-bold mb-2">Walkthrough</h2>
+          <p class="text-base-content/60 mb-8">A step-by-step look at the platform in action.</p>
+ 
+          <!-- Tabs -->
+          <div role="tablist" class="tabs tabs-bordered mb-8">
+            <input type="radio" name="demo_tabs" role="tab" class="tab" aria-label="Screenshots" checked />
+            <div role="tabpanel" class="tab-content pt-8">
+ 
+              <!-- Steps progress bar -->
+              <ul class="steps w-full mb-10" id="steps-bar">
+                <li class="step step-primary" data-step="0">Landing Page</li>
+                <li class="step" data-step="1">Product Detail</li>
+                <li class="step" data-step="2">Shopping Cart</li>
+                <li class="step" data-step="3">Checkout</li>
+              </ul>
+ 
+              <!-- Slide content -->
+              <div id="slides-container">
+ 
+                <!-- Slide 0 -->
+                <div class="step-slide active grid grid-cols-1 lg:grid-cols-3 gap-6 items-start" data-index="0">
+                  <div class="lg:col-span-2">
+                    <img src="https://placehold.co/800x450?text=Step+1+-+Landing+Page" alt="Landing page" class="rounded-xl shadow-md w-full" />
+                  </div>
+                  <div class="card bg-base-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="font-bold text-lg">Landing Page</h3>
+                      <p class="text-base-content/60 text-sm leading-relaxed">
+                        The landing page greets users with a clean product grid. Users can browse without logging in, and the navbar shows login and register options prominently.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- Slide 1 -->
+                <div class="step-slide grid grid-cols-1 lg:grid-cols-3 gap-6 items-start" data-index="1">
+                  <div class="lg:col-span-2">
+                    <img src="https://placehold.co/800x450?text=Step+2+-+Product+Detail" alt="Product detail" class="rounded-xl shadow-md w-full" />
+                  </div>
+                  <div class="card bg-base-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="font-bold text-lg">Product Detail</h3>
+                      <p class="text-base-content/60 text-sm leading-relaxed">
+                        Clicking a product opens a detail page with full description, price, stock status, and an add to cart button. Reviews are shown below the fold.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- Slide 2 -->
+                <div class="step-slide grid grid-cols-1 lg:grid-cols-3 gap-6 items-start" data-index="2">
+                  <div class="lg:col-span-2">
+                    <img src="https://placehold.co/800x450?text=Step+3+-+Shopping+Cart" alt="Shopping cart" class="rounded-xl shadow-md w-full" />
+                  </div>
+                  <div class="card bg-base-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="font-bold text-lg">Shopping Cart</h3>
+                      <p class="text-base-content/60 text-sm leading-relaxed">
+                        The cart updates in real time. Users can adjust quantities or remove items. The order summary recalculates automatically before proceeding to checkout.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+ 
+                <!-- Slide 3 -->
+                <div class="step-slide grid grid-cols-1 lg:grid-cols-3 gap-6 items-start" data-index="3">
+                  <div class="lg:col-span-2">
+                    <img src="https://placehold.co/800x450?text=Step+4+-+Checkout" alt="Checkout" class="rounded-xl shadow-md w-full" />
+                  </div>
+                  <div class="card bg-base-100 shadow-sm">
+                    <div class="card-body">
+                      <h3 class="font-bold text-lg">Checkout</h3>
+                      <p class="text-base-content/60 text-sm leading-relaxed">
+                        Users fill in their shipping details and confirm the order. A confirmation email is sent and the order appears in their account dashboard immediately.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+ 
+              </div>
+ 
+              <!-- Prev / Next -->
+              <div class="flex justify-between items-center mt-8">
+                <button id="prev-btn" class="btn btn-outline" disabled>
+                  ← Previous
+                </button>
+                <span id="step-counter" class="text-sm text-base-content/50 font-mono">1 / 4</span>
+                <button id="next-btn" class="btn btn-primary">
+                  Next →
+                </button>
+              </div>
+ 
+            </div>
+ 
+            <!-- Video Tab -->
+            <input type="radio" name="demo_tabs" role="tab" class="tab" aria-label="Demo Video" />
+            <div role="tabpanel" class="tab-content pt-8">
+              <div class="card bg-base-100 shadow-sm">
+                <div class="card-body items-center text-center py-16">
+                  <p class="text-base-content/50 text-lg">Demo video will be embedded here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- ── Achievements / Limitations / Improvements ── -->
+        <div class="space-y-6 mb-16">
+          <div class="collapse collapse-arrow bg-base-100 shadow-sm">
+            <input type="radio" name="writeup" checked />
+            <div class="collapse-title text-xl font-bold">What the Project Achieved</div>
+            <div class="collapse-content text-base-content/70 leading-relaxed">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-100 shadow-sm">
+            <input type="radio" name="writeup" />
+            <div class="collapse-title text-xl font-bold">Limitations</div>
+            <div class="collapse-content text-base-content/70 leading-relaxed">
+              <p>No payment gateway integration was implemented due to time constraints. The search functionality is basic and does not support fuzzy matching.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-arrow bg-base-100 shadow-sm">
+            <input type="radio" name="writeup" />
+            <div class="collapse-title text-xl font-bold">Future Improvements</div>
+            <div class="collapse-content text-base-content/70 leading-relaxed">
+              <p>Integration with Stripe for payments. Adding a recommendation engine based on purchase history. Migrating the frontend to React for a better user experience.</p>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- ── GitHub Section ── -->
+        <div class="card bg-base-100 shadow-none mb-8">
+          <div class="card-body flex-row items-center justify-between flex-wrap gap-4">
+            <div>
+              <h2 class="text-xl font-bold">View on GitHub</h2>
+              <p class="text-base-content/60 text-sm">Source code, commit history and README.</p>
+            </div>
+            <div class="flex gap-3 flex-wrap">
+              <a href="https://github.com" target="_blank" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub Repo
+              </a>
+            </div>
+          </div>
+        </div>
+ 
+      </main>
  
   <!-- Theme toggle script -->
   <script>
@@ -95,6 +367,51 @@
         html.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
       }
+    });
+  </script>
+
+  <script>
+  // Walkthrough carousel
+    const slides = document.querySelectorAll('.step-slide');
+    const stepItems = document.querySelectorAll('#steps-bar .step');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const counter = document.getElementById('step-counter');
+    const total = slides.length;
+    let current = 0;
+ 
+    function goTo(index) {
+      // Hide all slides
+      slides.forEach(s => s.classList.remove('active'));
+      // Show target
+      slides[index].classList.add('active');
+ 
+      // Update steps bar — all steps up to and including current are primary
+      stepItems.forEach((item, i) => {
+        if (i <= index) {
+          item.classList.add('step-primary');
+        } else {
+          item.classList.remove('step-primary');
+        }
+      });
+ 
+      // Update counter
+      counter.textContent = `${index + 1} / ${total}`;
+ 
+      // Update buttons
+      prevBtn.disabled = index === 0;
+      nextBtn.disabled = index === total - 1;
+ 
+      current = index;
+    }
+ 
+    prevBtn.addEventListener('click', () => { if (current > 0) goTo(current - 1); });
+    nextBtn.addEventListener('click', () => { if (current < total - 1) goTo(current + 1); });
+ 
+    // Also allow clicking step labels to jump directly
+    stepItems.forEach((item, i) => {
+      item.style.cursor = 'pointer';
+      item.addEventListener('click', () => goTo(i));
     });
   </script>
  
