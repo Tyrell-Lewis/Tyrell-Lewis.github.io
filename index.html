@@ -53,7 +53,6 @@
     <div class="hidden lg:flex flex-none">
       <ul class="menu menu-horizontal px-1">
         <li><a href="index.html" class="font-medium">Home</a></li>
-        <li><a href="projects.html" class="font-medium">Projects</a></li>
 
       </ul>
     </div>
@@ -84,7 +83,11 @@
       <ul class="menu p-4 w-64 min-h-full bg-base-200 text-base-content">
         <li class="menu-title text-lg font-bold pb-2">Tyrell Lewis</li>
         <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
+        <li><a href="studentConductTracker.html">Student Conduct Tracker</a></li>
+        <li><a href="predictAthlete.html">Predict Athlete Position</a></li>
+        <li><a href="webStore.html">E-Commerce Platform</a></li>
+        <li><a href="examPlatform.html">Examination Platform</a></li>
+        <li><a href="examPlatformDashboard.html">Examination Platform Dashboard</a></li>
 
       </ul>
     </div>
@@ -185,7 +188,12 @@
             <p>Desc of predict athlete</p>
 
             <div class="card-actions justify-end">
-              <a href="#" class="btn btn-primary">View on GitHub</a>
+              <a href="predictAthlete.html" class="btn btn-primary">
+                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                  </svg>
+                  View Project
+              </a>
             </div>
           </div>
         </div>
@@ -196,7 +204,11 @@
             <p>Desc of predict athlete</p>
 
             <div class="card-actions justify-end">
-              <a href="#" class="btn btn-primary">View on GitHub</a>
+              <a href="studentConductTracker.html" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                View Project</a>
             </div>
           </div>
         </div>
@@ -207,7 +219,44 @@
             <p>Desc of predict athlete</p>
 
             <div class="card-actions justify-end">
-              <a href="#" class="btn btn-primary">View on GitHub</a>
+              <a href="webStore.html" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card project-card bg-base-200 min-h-64 shadow-md">
+          <div class="card-body">
+            <h3 class="card-title">Exam Platform</h3>
+            <p>Desc of predict athlete</p>
+
+            <div class="card-actions justify-end">
+              <a href="examPlatform.html" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card project-card bg-base-200 min-h-64 shadow-md">
+          <div class="card-body">
+            <h3 class="card-title">Exam Platform Dashboard</h3>
+            <p>Desc of predict athlete</p>
+
+            <div class="card-actions justify-end">
+              <a href="examPlatformDashboard.html" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
+                </svg>
+                View Project
+              </a>
             </div>
           </div>
         </div>
@@ -218,18 +267,91 @@
 
     <br>
     <br>
-    <section class="skills">
+    <section class="skills py-10">
       <h2 class="text-3xl font-bold mb-4">Skills</h2>
-      <p class="text-lg text-base-content/70 mb-6">Here are some of the technologies I'm proficient in:</p>
-      
-      <ul class="list-disc list-inside">
-        <li>Python</li>
-        <li>Java</li>
-        <li>JavaScript</li>
-        <li>SQL</li>
-        <li>Git & GitHub</li>
-        <li>Data Analysis & Visualization</li>
-      </ul>
+      <p class="text-lg text-base-content/70 mb-6">Technologies I work with:</p>
+
+      <div class="flex flex-wrap justify-center gap-6">
+      <!-- <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-2"> -->
+
+        <div class="tooltip" data-tip="Python">
+          <a href="https://python.org" target="_blank" 
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-8 h-8" alt="Python"/>
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="Flask">
+          <a href="https://flask.palletsprojects.com" target="_blank"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" class="w-8 h-8" alt="Flask"/>
+           
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="JavaScript">
+          <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8 h-8" alt="Javascript"/>
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="PostgreSQL">
+          <a href="https://www.postgresql.org" target="_blank"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="w-8 h-8" alt="PosatgreSQL"/>
+          
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="MySQL">
+          <a href="https://www.mysql.com" target="_blank"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-8 h-8" alt="MySQL"/>
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="Git">
+          <a href="https://git-scm.com" target="_blank"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-8 h-8" alt="Git"/>
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="GitHub">
+          <a href="https://github.com" target="_blank"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="w-8 h-8" alt="Github"/>
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="HTML">
+          <a href="#!"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="w-8 h-8" alt="HTML" />
+           
+          </a>
+        </div>
+
+        <div class="tooltip" data-tip="CSS">
+          <a href="#!"
+            class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
+            
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="w-8 h-8" alt="CSS"/>
+           
+          </a>
+        </div>
+
+        
+
+        
+
+
+      </div>
     </section>
   </main>
  
