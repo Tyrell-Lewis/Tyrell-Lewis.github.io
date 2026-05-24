@@ -43,7 +43,10 @@
       opacity: 1;
       transform: translateY(0);
     }
+
   </style>
+
+  
 
 </head>
 <body>
@@ -146,26 +149,22 @@
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
                <h3 class="text-base-content leading-relaxed">
-                <b>Team Lead | Backend Developer.</b>
+                <b>Data Analyst</b>
               </h3>
               <ul class="menu">
                 <li class="text-base-content/80 leading-relaxed">
-                  Responsible for designing the database schema and building the REST API with Flask.
+                  Designed and implemented an ETL pipeline. Extracting data from a PostgreSQL database, transforming it via SQL views and queries, and loading it into Power BI to build an interactive analytics dashboard.
                 </li>
                 <br>
                 <li class="text-base-content/80 leading-relaxed">
-                  Led a team of 3 developers, overseeing task delegation, sprint planning, and regular reporting using Agile methodology and Trello for tracking progress and accountability.
-                </li>
-                <br>
-
-                <li class="text-base-content/80 leading-relaxed">
-                  Developed backend features for threaded commenting and reply systems, tying each interaction to specific users and reviews for behavioral traceability
+                  Wrote complex SQL queries to extract and aggregate data for reporting, including joins across multiple tables to correlate user activity with exam outcomes and identify trends in student performance.
                 </li>
                 <br>
 
                 <li class="text-base-content/80 leading-relaxed">
-                  Designed and implemented the core karma scoring algorithm, incorporating dynamic updates based on review sentiment, likes/dislikes, and peer agreement.
+                  Designed and implemented a multi-page PowerBI dashboard that provides actionable insights to administrators, enabling data-driven decisions to improve the exam platform's effectiveness and user experience.
                 </li>
+                <br>
                 
               </ul>
             </div>
@@ -204,40 +203,56 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">User Authentication</h3>
-                <p class="text-sm text-base-content/60">Secure login and registration with session management.</p>
+                <h3 class="font-bold">Data Visualization</h3>
+                <p class="text-sm text-base-content/60">Interactive dashboards providing actionable insights into exam performance and user engagement.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Product Catalogue</h3>
-                <p class="text-sm text-base-content/60">Browse, search and filter products dynamically.</p>
+                <h3 class="font-bold">ETL Pipeline</h3>
+                <p class="text-sm text-base-content/60">Extract, transform, and load data from the PostgreSQL server for analytics and reporting.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Shopping Cart</h3>
-                <p class="text-sm text-base-content/60">Add, remove, and update cart items in real time.</p>
+                <h3 class="font-bold">Database Integration</h3>
+                <p class="text-sm text-base-content/60">Direct connection between PostgreSQL and Power BI enabling up-to-date reporting from exam data.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Order Management</h3>
-                <p class="text-sm text-base-content/60">Track orders from placement to delivery.</p>
+                <h3 class="font-bold">SQL Views & Query Design </h3>
+                <p class="text-sm text-base-content/60">Wrote optimised SQL views and queries to aggregate and reshape exam data into report ready structures.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Admin Dashboard</h3>
-                <p class="text-sm text-base-content/60">Manage inventory, users and orders from one place.</p>
+                  <h3 class="font-bold">Multi-Page Dashboard </h3>
+                  <p class="text-sm text-base-content/60">Navigation across dedicated report pages such as: Exam Summary, User Information, and Platform Analytics; each providing a focused analytical view.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">REST API</h3>
-                <p class="text-sm text-base-content/60">Full API backend powering all frontend interactions.</p>
+                <h3 class="font-bold">Slicers & Filtering</h3>
+                <p class="text-sm text-base-content/60">Interactive slicers for filtering and allows for drill-down, enabling targeted analysis of specific graphs and visuals.</p>
               </div>
             </div>
+
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                  <h3 class="font-bold">Service Worker</h3>
+                  <p class="text-sm text-base-content/60">Enables offline functionality and background sync for a seamless user experience.</p>
+              </div>
+            </div>
+
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                  <h3 class="font-bold">Report Generation</h3>
+                  <p class="text-sm text-base-content/60">Allows administrators to generate detailed reports on exam performance.</p>
+              </div>
+            </div>
+
+            
           </div>
         </div>
  
@@ -355,27 +370,27 @@
             <input type="radio" name="writeup" checked />
             <div class="collapse-title text-xl font-bold">What the Project Achieved</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.</p>
+              <p>Ongoing -</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Limitations</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>No payment gateway integration was implemented due to time constraints. The search functionality is basic and does not support fuzzy matching.</p>
+              <p>Ongoing -  </p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Future Improvements</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Integration with Stripe for payments. Adding a recommendation engine based on purchase history. Migrating the frontend to React for a better user experience.</p>
+              <p>Ongoing - </p>
             </div>
           </div>
         </div>
  
-        <!-- ── GitHub ── -->
-        <div class="card bg-base-100 shadow-none mb-8">
+        <!-- ── GitHub Section ── -->
+        <!-- <div class="card bg-base-100 shadow-none mb-8">
           <div class="card-body flex-row items-center justify-between flex-wrap gap-4">
             <div>
               <h2 class="text-xl font-bold">View on GitHub</h2>
@@ -390,7 +405,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
         <footer>
             <p class="text-center text-base-content/60 mt-10 mb-4">© 2026 Tyrell Lewis. All rights reserved.</p>
         </footer> 
@@ -472,7 +487,7 @@
       });
     }, { threshold: 0.4 }); //How much of the element needs to be on screen to trigger the visbility
 
-    document.querySelectorAll('.timeline-start, .timeline-end, .project-card, .btn-lg').forEach(el => {
+    document.querySelectorAll('.role-card, .tech-card, .feature-card').forEach(el => {
       observer.observe(el);
     });
   </script>

@@ -151,7 +151,7 @@
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
                <h3 class="text-base-content leading-relaxed">
-                <b>Team Lead | Backend Developer.</b>
+                <b>Team Lead | Backend Developer</b>
               </h3>
               <ul class="menu">
                 <li class="text-base-content/80 leading-relaxed">
@@ -159,17 +159,22 @@
                 </li>
                 <br>
                 <li class="text-base-content/80 leading-relaxed">
-                  Led a team of 3 developers, overseeing task delegation, sprint planning, and regular reporting using Agile methodology and Trello for tracking progress and accountability.
+                  Led a team of 2 developers, overseeing task delegation, sprint planning, and regular reporting using Agile methodology and Trello for tracking progress and accountability.
                 </li>
                 <br>
 
                 <li class="text-base-content/80 leading-relaxed">
-                  Developed backend features for threaded commenting and reply systems, tying each interaction to specific users and reviews for behavioral traceability
+                  Developed backend features for offline exam sessions, including local caching of answers and automatic synchronization when connectivity is restored.
                 </li>
                 <br>
 
                 <li class="text-base-content/80 leading-relaxed">
-                  Designed and implemented the core karma scoring algorithm, incorporating dynamic updates based on review sentiment, likes/dislikes, and peer agreement.
+                  Implemented the core exam scheduling and question management system, allowing administrators to create exams with various question types and set availability windows.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Implemented a scheduling system which automatically submits exams when the time limit is reached, ensuring all candidates are evaluated fairly regardless of connectivity issues.
                 </li>
                 
               </ul>
@@ -245,26 +250,26 @@
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Product Catalogue</h3>
-                <p class="text-sm text-base-content/60">Browse, search and filter products dynamically.</p>
+                <h3 class="font-bold">Question Creation</h3>
+                <p class="text-sm text-base-content/60">Create and manage various types of questions for exams.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Shopping Cart</h3>
-                <p class="text-sm text-base-content/60">Add, remove, and update cart items in real time.</p>
+                <h3 class="font-bold">Exam Scheduling</h3>
+                <p class="text-sm text-base-content/60">Schedule exams with specific start and end times.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Order Management</h3>
-                <p class="text-sm text-base-content/60">Track orders from placement to delivery.</p>
+                <h3 class="font-bold">Automatic Grading</h3>
+                <p class="text-sm text-base-content/60">Automatically grade multiple-choice, true/false questions and short-answer questions.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Admin Dashboard</h3>
-                <p class="text-sm text-base-content/60">Manage inventory, users and orders from one place.</p>
+                  <h3 class="font-bold">Admin Dashboard</h3>
+                  <p class="text-sm text-base-content/60">Allows administrators to setup exams, as well as an in-app summary of exam analyitcs.</p>
               </div>
             </div>
             <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
@@ -273,6 +278,22 @@
                 <p class="text-sm text-base-content/60">Full API backend powering all frontend interactions.</p>
               </div>
             </div>
+
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                  <h3 class="font-bold">Service Worker</h3>
+                  <p class="text-sm text-base-content/60">Enables offline functionality and background sync for a seamless user experience.</p>
+              </div>
+            </div>
+
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                  <h3 class="font-bold">Report Generation</h3>
+                  <p class="text-sm text-base-content/60">Allows administrators to generate detailed reports on exam performance.</p>
+              </div>
+            </div>
+
+            
           </div>
         </div>
  
@@ -390,27 +411,27 @@
             <input type="radio" name="writeup" checked />
             <div class="collapse-title text-xl font-bold">What the Project Achieved</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.</p>
+              <p>Ongoing -</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Limitations</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>No payment gateway integration was implemented due to time constraints. The search functionality is basic and does not support fuzzy matching.</p>
+              <p>Ongoing -</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Future Improvements</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Integration with Stripe for payments. Adding a recommendation engine based on purchase history. Migrating the frontend to React for a better user experience.</p>
+              <p>Ongoing - </p>
             </div>
           </div>
         </div>
  
         <!-- ── GitHub Section ── -->
-        <div class="card bg-base-100 shadow-none mb-8">
+        <!-- <div class="card bg-base-100 shadow-none mb-8">
           <div class="card-body flex-row items-center justify-between flex-wrap gap-4">
             <div>
               <h2 class="text-xl font-bold">View on GitHub</h2>
@@ -425,7 +446,7 @@
               </a>
             </div>
           </div>
-        </div>
+        </div> -->
         <footer>
             <p class="text-center text-base-content/60 mt-10 mb-4">© 2026 Tyrell Lewis. All rights reserved.</p>
         </footer> 

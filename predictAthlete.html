@@ -144,7 +144,7 @@
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
                <h3 class="text-base-content leading-relaxed">
-                <b>Team Lead | Data Scientist | Full-Stack Developer.</b>
+                <b>Team Lead | Data Scientist | Full-Stack Developer</b>
               </h3>
               <ul class="menu">
                 <li class="text-base-content/80 leading-relaxed">
@@ -389,21 +389,27 @@
             <input type="radio" name="writeup" checked />
             <div class="collapse-title text-xl font-bold">What the Project Achieved</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.</p>
+              <p>The project successfully delivered a working prediction system capable of recommending the most suitable playing position for an aspiring footballer based on their physical attributes. Beyond the model itself, the project was delivered as a full-stack web application built with Flask, allowing users to input their attributes and receive real-time position predictions alongside the 5 most physically similar professional players from the dataset.
+The project was presented at the University of the West Indies open day and a technical paper was co-authored in IEEE format, demonstrating both the academic rigour and practical application of the work.</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Limitations</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>No payment gateway integration was implemented due to time constraints. The search functionality is basic and does not support fuzzy matching.</p>
+              <p>While the project achieved its core objectives, several limitations were identified. The dataset was heavily skewed towards European leagues, resulting in limited representation of players from other regions and reducing the system's ability to generalise across a more diverse global football landscape.</p><br>
+                <p>The dataset also contained no data for women athletes, meaning the prediction system is limited to male professional players only, a significant gap given the growth of women's football worldwide.</p><br>
+                <p>Lower league players were under-represented, as most data was sourced from higher-profile leagues. This means predictions may be less reliable for users whose attributes align more closely with lower-league football.</p><br>
+                <p>The physical attribute inputs lacked real-world context for the average user. Without a clear benchmark or reference point, a user inputting a value such as their sprint speed or agility score may not know what constitutes a good, average, or poor value, potentially affecting the quality of predictions made.</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Future Improvements</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Integration with Stripe for payments. Adding a recommendation engine based on purchase history. Migrating the frontend to React for a better user experience.</p>
+              <p>The most impactful improvement would be expanding the dataset to include broader global representation, incorporating more players from South American, African, and Asian leagues to significantly improve the model's ability to generalise across different playing styles and physical profiles.</p><br>
+               <p>Including women athletes in the dataset would be a meaningful extension of the project, allowing the system to serve a much wider audience and reflect the growing prominence of women's football at both professional and grassroots levels.</p><br>
+                <p>A key improvement would be establishing real-world context for the physical attribute values used in the dataset. The data uses arbitrary numerical scores, for example, a sprint speed of 80 or 90, but provides no indication of what these numbers actually represent in measurable, real-world terms such as kilometres per hour. Mapping these scores to recognised athletic benchmarks would make the inputs far more meaningful, both for users entering their attributes and for interpreting what the model has actually learned from the data.</p>
             </div>
           </div>
         </div>
@@ -416,7 +422,7 @@
               <p class="text-base-content/60 text-sm">Source code, commit history and README.</p>
             </div>
             <div class="flex gap-3 flex-wrap">
-              <a href="https://github.com" target="_blank" class="btn btn-primary">
+              <a href="https://github.com/PredictBigDataProj/Predict-Athlete" target="_blank" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
