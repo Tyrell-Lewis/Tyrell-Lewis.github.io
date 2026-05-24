@@ -13,6 +13,36 @@
   <style>
     .step-slide { display: none !important; }
     .step-slide.active { display: grid !important; }
+
+    .role-card{
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .role-card.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tech-card{
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .tech-card.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .feature-card{
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .feature-card.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 
 </head>
@@ -94,31 +124,67 @@
         <!-- ── Hero: Title + About + Date ── -->
         <div class="relative mb-16">
           <div class="hidden lg:block absolute right-0 top-0 text-right md:block absolute right-0 top-0 text-right">
-            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
-            <p class="text-sm text-base-content/50 font-mono">5 months</p>
+            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — Jun 2025</div>
+            <p class="text-sm text-base-content/50 font-mono">6 months</p>
           </div>
           <h1 class="serif text-5xl font-bold mb-6 text-center">Predict Athlete Prediction</h1>
           <p class="text-center text-base-content/60 text-lg max-w-2xl mx-auto leading-relaxed" style="font-family: 'DM Serif Display', serif; font-style: italic;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            A machine learning web application that analyses a user's physical attributes to predict their most suitable playing position. Built with a dataset of over 18,000 football players and presented at UWI FST Open Day 2025 to demonstrate ML-driven player evaluation.
           </p>
         </div>
 
         <div class="lg:hidden md:hidden xl:hidden">
-          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
-          <p class="text-sm text-base-content/50 font-mono">5 months</p>
+          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — Jun 2025</div>
+          <p class="text-sm text-base-content/50 font-mono">6 months</p>
         </div>
  
         <!-- ── Role + Tech Stack ── -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div class="card bg-base-100 shadow-none">
+          <div class="card role-card bg-base-100 shadow-none">
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
-              <p class="text-base-content/70 leading-relaxed">
-                Full Stack Developer. Responsible for designing the database schema, building the REST API with Flask, and implementing the frontend. Led all technical decisions throughout the project lifecycle.
-              </p>
+               <h3 class="text-base-content leading-relaxed">
+                <b>Team Lead | Data Scientist | Full-Stack Developer.</b>
+              </h3>
+              <ul class="menu">
+                <li class="text-base-content/80 leading-relaxed">
+                  Led a team of 3 developers, overseeing task delegation, sprint planning, and regular reporting using Agile methodology and Trello for tracking progress and accountability.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Implemented an algorithm to scrape nationality data from a third-party football website using Selenium and BeautifulSoup, enriching our dataset of 18,000+ players.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Developed a 15-binary classifier system using Random Forest and XGBoost, applying SMOTE oversampling, PCA, RFE, and Lasso to refine 52 input features per position.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Co-authored a technical paper in IEEE format and presented the project at my university's open day.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Developed the full-stack web application using Flask, integrating the ML model for real-time position predictions based on user-inputted physical attributes.
+                </li>
+                <br>
+                
+                <li class="text-base-content/80 leading-relaxed">
+                  Implemented an algorithmn to compare the user's inputted physical attributes against the dataset to find the 5 most similar players, displaying their names positions as part of the prediction results.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Created an interactive Leaflet.js map to explore league-wise stats like nationality distribution, career length, and average age.
+                </li>
+                
+              </ul>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-none">
+          <div class="card tech-card bg-base-100 shadow-none">
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-3">Tech Stack</h2>
               <div class="flex flex-wrap gap-3">
@@ -170,40 +236,40 @@
         <div class="mb-16">
           <h2 class="text-3xl font-bold mb-6">Key Features</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">User Authentication</h3>
-                <p class="text-sm text-base-content/60">Secure login and registration with session management.</p>
+                <h3 class="font-bold">Position Prediction</h3>
+                <p class="text-sm text-base-content/60">Predict the most suitable position for an athlete based on the user inputted physical attributes.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Product Catalogue</h3>
-                <p class="text-sm text-base-content/60">Browse, search and filter products dynamically.</p>
+                <h3 class="font-bold">Similar Player Finder</h3>
+                <p class="text-sm text-base-content/60">Displays the top 5 most similar players based on the user inputted physical attributes.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Shopping Cart</h3>
-                <p class="text-sm text-base-content/60">Add, remove, and update cart items in real time.</p>
+                <h3 class="font-bold">Web Application</h3>
+                <p class="text-sm text-base-content/60">Users interact with the ML model through a clean web interface, input physical attributes and receive instant predictions.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Order Management</h3>
-                <p class="text-sm text-base-content/60">Track orders from placement to delivery.</p>
+                <h3 class="font-bold">Data Collection</h3>
+                <p class="text-sm text-base-content/60">Dataset of 18,000+ players sourced from kaggle and enriched with scraped nationality data using Selenium and BeautifulSoup.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Admin Dashboard</h3>
-                <p class="text-sm text-base-content/60">Manage inventory, users and orders from one place.</p>
+                <h3 class="font-bold">Data Pre-processing</h3>
+                <p class="text-sm text-base-content/60">Clean and prepare the dataset for model training using pandas. SMOTE oversampling to handle class imbalance. Feature selection using PCA, RFE and Lasso to reduce 52 input features.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">REST API</h3>
-                <p class="text-sm text-base-content/60">Full API backend powering all frontend interactions.</p>
+                <h3 class="font-bold">Machine Learning Model</h3>
+                <p class="text-sm text-base-content/60">15-binary classifier system, one classifier per position where the best confidence wins. Random Forest and XGBoost models compared, best performer selected per position.</p>
               </div>
             </div>
           </div>
@@ -359,7 +425,10 @@
             </div>
           </div>
         </div>
- 
+
+        <footer>
+            <p class="text-center text-base-content/60 mt-10 mb-4">© 2026 Tyrell Lewis. All rights reserved.</p>
+        </footer>        
       </main>
  
   <!-- Theme toggle script -->
@@ -429,5 +498,18 @@
     });
   </script>
  
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.4 }); //How much of the element needs to be on screen to trigger the visbility
+
+    document.querySelectorAll('.role-card, .tech-card, .feature-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

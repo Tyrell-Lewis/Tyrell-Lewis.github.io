@@ -13,7 +13,40 @@
   <style>
     .step-slide { display: none !important; }
     .step-slide.active { display: grid !important; }
+
+    .role-card{
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .role-card.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tech-card{
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .tech-card.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .feature-card{
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .feature-card.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
   </style>
+
+
 
 </head>
 <body>
@@ -94,31 +127,53 @@
         <!-- ── Hero: Title + About + Date ── -->
         <div class="relative mb-16">
           <div class="hidden lg:block absolute right-0 top-0 text-right md:block absolute right-0 top-0 text-right">
-            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
-            <p class="text-sm text-base-content/50 font-mono">5 months</p>
+            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Feb 2025 — Apr 2025</div>
+            <p class="text-sm text-base-content/50 font-mono">3 months</p>
           </div>
           <h1 class="serif text-5xl font-bold mb-6 text-center">Student Conduct Tracker</h1>
           <p class="text-center text-base-content/60 text-lg max-w-2xl mx-auto leading-relaxed" style="font-family: 'DM Serif Display', serif; font-style: italic;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            A full-stack platform where academic staff can log, review, and discuss student 
+              behavior. Featuring threaded comments, karma-based scoring, and a collaborative 
+              feed to track conduct over time.
           </p>
         </div>
 
         <div class="lg:hidden md:hidden xl:hidden">
-          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
-          <p class="text-sm text-base-content/50 font-mono">5 months</p>
+          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Feb 2025 — Apr 2025</div>
+          <p class="text-sm text-base-content/50 font-mono">3 months</p>
         </div>
  
         <!-- ── Role + Tech Stack ── -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div class="card bg-base-100 shadow-none">
+          <div class="card role-card bg-base-100 shadow-none">
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
-              <p class="text-base-content/70 leading-relaxed">
-                Full Stack Developer. Responsible for designing the database schema, building the REST API with Flask, and implementing the frontend. Led all technical decisions throughout the project lifecycle.
-              </p>
+              <h3 class="text-base-content leading-relaxed">
+                <b>Team Lead | Backend Developer.</b>
+              </h3>
+              <ul class="menu">
+                <li class="text-base-content/80 leading-relaxed">
+                  Responsible for designing the database schema and building the REST API with Flask.
+                </li>
+                <br>
+                <li class="text-base-content/80 leading-relaxed">
+                  Led a team of 3 developers, overseeing task delegation, sprint planning, and regular reporting using Agile methodology and Trello for tracking progress and accountability.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Developed backend features for threaded commenting and reply systems, tying each interaction to specific users and reviews for behavioral traceability
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Designed and implemented the core karma scoring algorithm, incorporating dynamic updates based on review sentiment, likes/dislikes, and peer agreement.
+                </li>
+                
+              </ul>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-none">
+          <div class="card tech-card bg-base-100 shadow-none">
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-3">Tech Stack</h2>
               <div class="flex flex-wrap gap-3">
@@ -180,40 +235,48 @@
         <div class="mb-16">
           <h2 class="text-3xl font-bold mb-6">Key Features</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">User Authentication</h3>
                 <p class="text-sm text-base-content/60">Secure login and registration with session management.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Product Catalogue</h3>
-                <p class="text-sm text-base-content/60">Browse, search and filter products dynamically.</p>
+                <h3 class="font-bold">Review Creation & Management</h3>
+                <p class="text-sm text-base-content/60">Allow teaching staff to create and manage reviews for students' and their behaviour.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Shopping Cart</h3>
-                <p class="text-sm text-base-content/60">Add, remove, and update cart items in real time.</p>
+                <h3 class="font-bold">Student Record Creation & Management</h3>
+                <p class="text-sm text-base-content/60">Allow teaching staff to add, remove, and update student records in the database.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Order Management</h3>
-                <p class="text-sm text-base-content/60">Track orders from placement to delivery.</p>
+                <h3 class="font-bold">Karma Integration</h3>
+                <p class="text-sm text-base-content/60">Tracks student karma score overtime, based on the reviews created and voted on by teaching staff.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
-                <h3 class="font-bold">Admin Dashboard</h3>
-                <p class="text-sm text-base-content/60">Manage inventory, users and orders from one place.</p>
+                <h3 class="font-bold">Promoting Collaboration</h3>
+                <p class="text-sm text-base-content/60">Enables communication and coordination between teaching staff, by allowing them to browse, comment and reply to each other's feedback.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">REST API</h3>
                 <p class="text-sm text-base-content/60">Full API backend powering all frontend interactions.</p>
+              </div>
+            </div>
+
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
+              <div class="card-body py-4">
+                <h3 class="font-bold">PostgreSQL Server Integration</h3>
+                <p class="text-sm text-base-content/60">Seamless integration with PostgreSQL for efficient data storage, retrieval and querying</p>
               </div>
             </div>
           </div>
@@ -333,21 +396,23 @@
             <input type="radio" name="writeup" checked />
             <div class="collapse-title text-xl font-bold">What the Project Achieved</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod, nisi vel consectetur interdum, nisl nunc egestas nunc, vitae tincidunt nisl nunc euismod nunc.</p>
+              <p>The Student Conduct Tracker is a desktop web-based application, which was built using Python Flask and aims to assist teaching staff with monitoring and reviewing student conduct/ behaviour. This system aims to provide a centralized platform to document student behaviour, allow for consistent documentation across various departments and allow staff insight into a student’s conduct before initially working with them.</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Limitations</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>No payment gateway integration was implemented due to time constraints. The search functionality is basic and does not support fuzzy matching.</p>
+              <p>Due to time constraints, there is no functionality which allows the matching of students via a visual or picture. To accurately match a student to an incident the staff must know that student's ID number.</p>
+              <br>
+              <p>There is also no functionality which allows for the exporting of data, meaning that if staff wanted to run analytics on the data they would have to do so manually by copying and pasting from the database.</p>
             </div>
           </div>
           <div class="collapse collapse-arrow bg-base-100 shadow-sm">
             <input type="radio" name="writeup" />
             <div class="collapse-title text-xl font-bold">Future Improvements</div>
             <div class="collapse-content text-base-content/70 leading-relaxed">
-              <p>Integration with Stripe for payments. Adding a recommendation engine based on purchase history. Migrating the frontend to React for a better user experience.</p>
+              <p>Integration with either external or internal software to allow for data aggregationa nd analysis to uncover patterns and trends in student behaviour</p>
             </div>
           </div>
         </div>
@@ -360,7 +425,7 @@
               <p class="text-base-content/60 text-sm">Source code, commit history and README.</p>
             </div>
             <div class="flex gap-3 flex-wrap">
-              <a href="https://github.com" target="_blank" class="btn btn-primary">
+              <a href="https://github.com/500BrainNotWorking/Student-Conduct-Tracker-1" target="_blank" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577v-2.165c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.63-5.37-12-12-12z"/>
                 </svg>
@@ -369,8 +434,13 @@
             </div>
           </div>
         </div>
- 
+
+        <footer>
+            <p class="text-center text-base-content/60 mt-10 mb-4">© 2026 Tyrell Lewis. All rights reserved.</p>
+        </footer>       
       </main>
+
+
  
   <!-- Theme toggle script -->
   <script>
@@ -438,6 +508,22 @@
       item.addEventListener('click', () => goTo(i));
     });
   </script>
+
+  
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.4 }); //How much of the element needs to be on screen to trigger the visbility
+
+    document.querySelectorAll('.role-card, .tech-card, .feature-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
  
 </body>
 </html>

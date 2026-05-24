@@ -14,6 +14,36 @@
     .step-slide { display: none !important; }
     .step-slide.active { display: grid !important; }
 
+    .role-card{
+      opacity: 0;
+      transform: translateX(-30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .role-card.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .tech-card{
+      opacity: 0;
+      transform: translateX(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .tech-card.visible{
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .feature-card{
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .feature-card.visible{
+      opacity: 1;
+      transform: translateY(0);
+    }
+
   </style>
 
   
@@ -97,31 +127,55 @@
         <!-- ── Hero: Title + About + Date ── -->
         <div class="relative mb-16">
           <div class="hidden lg:block absolute right-0 top-0 text-right md:block absolute right-0 top-0 text-right">
-            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
-            <p class="text-sm text-base-content/50 font-mono">5 months</p>
+            <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Feb 2026 — Present</div>
+            <p class="text-sm text-base-content/50 font-mono">4 months</p>
           </div>
           <h1 class="serif text-5xl font-bold mb-6 text-center">Exam Platform</h1>
           <p class="text-center text-base-content/60 text-lg max-w-2xl mx-auto leading-relaxed" style="font-family: 'DM Serif Display', serif; font-style: italic;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            An assessment platform built for evaluating potential employees. Administrators can schedule exams and build question 
+              papers directly in the platform, while candidates benefit from offline-resilient 
+              sessions where answers are cached locally as they go, so a dropped connection won't 
+              cost them their progress. Results are auto-graded and feed into an analytics 
+              dashboard for reporting and review.
           </p>
         </div>
 
         <div class="lg:hidden md:hidden xl:hidden">
-          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Jan 2025 — May 2025</div>
-          <p class="text-sm text-base-content/50 font-mono">5 months</p>
+          <div class="badge badge-outline badge-lg font-mono text-base-content/60 mb-1">Feb 2026 — Present</div>
+          <p class="text-sm text-base-content/50 font-mono">4 months</p>
         </div>
  
         <!-- ── Role + Tech Stack ── -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          <div class="card bg-base-100 shadow-none">
+          <div class="card role-card bg-base-100 shadow-none">
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-2">My Role</h2>
-              <p class="text-base-content/70 leading-relaxed">
-                Full Stack Developer. Responsible for designing the database schema, building the REST API with Flask, and implementing the frontend. Led all technical decisions throughout the project lifecycle.
-              </p>
+               <h3 class="text-base-content leading-relaxed">
+                <b>Team Lead | Backend Developer.</b>
+              </h3>
+              <ul class="menu">
+                <li class="text-base-content/80 leading-relaxed">
+                  Responsible for designing the database schema and building the REST API with Flask.
+                </li>
+                <br>
+                <li class="text-base-content/80 leading-relaxed">
+                  Led a team of 3 developers, overseeing task delegation, sprint planning, and regular reporting using Agile methodology and Trello for tracking progress and accountability.
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Developed backend features for threaded commenting and reply systems, tying each interaction to specific users and reviews for behavioral traceability
+                </li>
+                <br>
+
+                <li class="text-base-content/80 leading-relaxed">
+                  Designed and implemented the core karma scoring algorithm, incorporating dynamic updates based on review sentiment, likes/dislikes, and peer agreement.
+                </li>
+                
+              </ul>
             </div>
           </div>
-          <div class="card bg-base-100 shadow-none">
+          <div class="card tech-card bg-base-100 shadow-none">
             <div class="card-body">
               <h2 class="card-title text-xl font-bold mb-3">Tech Stack</h2>
               <div class="flex flex-wrap gap-3">
@@ -183,37 +237,37 @@
         <div class="mb-16">
           <h2 class="text-3xl font-bold mb-6">Key Features</h2>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">User Authentication</h3>
                 <p class="text-sm text-base-content/60">Secure login and registration with session management.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">Product Catalogue</h3>
                 <p class="text-sm text-base-content/60">Browse, search and filter products dynamically.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">Shopping Cart</h3>
                 <p class="text-sm text-base-content/60">Add, remove, and update cart items in real time.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">Order Management</h3>
                 <p class="text-sm text-base-content/60">Track orders from placement to delivery.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">Admin Dashboard</h3>
                 <p class="text-sm text-base-content/60">Manage inventory, users and orders from one place.</p>
               </div>
             </div>
-            <div class="card bg-base-300 shadow-sm border-l-4 border-primary">
+            <div class="card feature-card bg-base-300 shadow-sm border-l-4 border-primary">
               <div class="card-body py-4">
                 <h3 class="font-bold">REST API</h3>
                 <p class="text-sm text-base-content/60">Full API backend powering all frontend interactions.</p>
@@ -372,7 +426,9 @@
             </div>
           </div>
         </div>
- 
+        <footer>
+            <p class="text-center text-base-content/60 mt-10 mb-4">© 2026 Tyrell Lewis. All rights reserved.</p>
+        </footer> 
       </main>
  
   <!-- Theme toggle script -->
@@ -441,6 +497,19 @@
       item.addEventListener('click', () => goTo(i));
     });
   </script>
- 
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.4 }); //How much of the element needs to be on screen to trigger the visbility
+
+    document.querySelectorAll('.role-card, .tech-card, .feature-card').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
 </body>
 </html>

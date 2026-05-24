@@ -90,6 +90,22 @@
 
     <p class="text-lg text-neutral-content/60"> will insert small about section here</p>
   </main>
+
+  THIS IS FOR the before and after image slider, jsut keeping it here with teh associated script, since it works a bit better thna out of box daisy ui one.
+  <figure class="relative aspect-video rounded-xl overflow-hidden select-none" id="diff-container">
+              <!-- Bottom image (always full width) -->
+              <img alt="after" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a-blur.webp" class="absolute inset-0 w-full h-full object-cover" />
+              
+              <!-- Top image (clipped, not resized) -->
+              <div class="absolute inset-0 overflow-hidden" id="diff-clip" style="clip-path: inset(0 50% 0 0);">
+                <img alt="before" src="https://img.daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.webp" class="w-full h-full object-cover" />
+              </div>
+
+              <!-- Handle -->
+              <div id="diff-handle" class="absolute top-0 bottom-0 w-1 bg-white cursor-ew-resize" style="left: 50%;">
+                <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center text-sm">↔</div>
+              </div>
+            </figure>
  
   <!-- Theme toggle script -->
   <script>
@@ -112,6 +128,25 @@
       }
     });
   </script>
+
+<!-- SCRIPT FOR SLIDER WITH BEFORE AND AFTER IMAGE -->
+<script>
+  const container = document.getElementById('diff-container');
+  const clip = document.getElementById('diff-clip');
+  const handle = document.getElementById('diff-handle');
+  let dragging = false;
+
+  handle.addEventListener('mousedown', () => dragging = true);
+  document.addEventListener('mouseup', () => dragging = false);
+  document.addEventListener('mousemove', (e) => {
+    if (!dragging) return;
+    const rect = container.getBoundingClientRect();
+    const x = Math.max(0, Math.min(e.clientX - rect.left, rect.width));
+    const pct = (x / rect.width) * 100;
+    clip.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
+    handle.style.left = `${pct}%`;
+  });
+</script>
  
 </body>
 </html>

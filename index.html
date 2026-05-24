@@ -12,12 +12,12 @@
   <script>tailwind.config = { daisyui: { themes: ["light", "dark"] } }</script>
 
   <style>
-    .timeline-start, .timeline-end, .project-card {
+    .timeline-start, .timeline-end, .btn-lg{
       opacity: 0;
       transform: translateY(30px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .timeline-start.visible, .timeline-end.visible, .project-card.visible {
+    .timeline-start.visible, .timeline-end.visible, .btn-lg.visible {
       opacity: 1;
       transform: translateY(0);
     }
@@ -107,10 +107,7 @@
  
   <!-- Page Content -->
   <main class="container mx-auto px-4 py-10 overflow-x-hidden">
-    <!-- <h1 class="text-4xl font-bold mb-4">Tyrell Lewis</h1>
-    <p class="text-lg text-base-content/70">Software Engineer | Data Analyst</p>
 
-    <p class="text-lg text-neutral-content/60"> will insert small about section here</p> -->
 
     <div class="relative mb-16">
 
@@ -118,7 +115,8 @@
 
       <h3 class="text-xl font-semibold text-center mb-4">Software Engineer | Data Analyst</h3>
       <p class="text-center text-base-content/60 text-lg max-w-2xl mx-auto leading-relaxed" style="font-family: 'DM Serif Display', serif; font-style: italic;">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+        
+        A software engineer with a passion for building end-to-end solutions, from REST APIs and database architecture to machine learning models and data dashboards. Experienced in Python, SQL, and full stack web development, with a growing interest in applying data science to real-world problems.
       </p>
     </div>
 
@@ -141,9 +139,23 @@
             </svg>
           </div>
           <div class="timeline-start mb-10 md:text-end">
-            <time class="font-mono italic">2015 - 2022</time>
+            <time class="font-mono italic">Sep 2015 - June 2022</time>
             <div class="text-lg font-black">Hillview College</div>
-            Cape grades go here, scholarhsip goes here.
+            <ul class="hidden md:block">
+              
+              <li>National Scholarship — Awarded  for excellence in Information and Communication Technologies in the 2022 Caribbean Advanced Proficiency Examination (CAPE) examination.</li>
+              <br>
+              <li>Attended Hillview College for secondary education, Completed <b>ten (10)</b> CAPE subjects including Computer Science Units 1 & 2, Pure Mathematics Units 1 & 2, and Information Technology Units 1 & 2. As well as, <b>eight (8)</b> CSEC subjects including Mathematics, Physics, Chemistry, and Information Technology.</li>
+            </ul>
+
+            <ul class="lg:hidden md:hidden xl:hidden">
+              
+              <li>National Scholarship — Awarded  for excellence in Information and Communication Technologies in the 2022 (CAPE) examination.</li>
+              <br>
+              <li>Attended Hillview College for secondary education, Completed <b>ten (10)</b> CAPE subjects. As well as, <b>eight (8)</b> CSEC subjects.</li>
+            </ul>
+            
+
           </div>
           <hr />
         </li>
@@ -164,9 +176,20 @@
             </svg>
           </div>
           <div class="timeline-end md:mb-10">
-            <time class="font-mono italic">2022 - 2025</time>
-            <div class="text-lg font-black">University of the West Indies</div>
-            BSc. Computer Science Special, gpa goes here, first class honours goes here.
+            <time class="font-mono italic">Sep 2022 - May 2025</time>
+            <div class="text-lg font-black">University of the West Indies - BSc. Computer Science</div>
+            <ul class="hidden md:block">
+              <li>Graduated with <b>First Class Honours</b>, achieving a GPA of 3.62</li>
+              <br>
+              <li>Attended the University of the West Indies for tertiary education, Completed relevant coursework such as: <b> Introduction to Data Analytics, Big Data Analytics, Industrial Statistics, Software Engineering I, Software Engineering II, Enterprise Database Systems</b></li>
+            </ul>
+
+            <ul class="md:hidden lg:hidden xl:hidden">
+              <li>Graduated with <b>First Class Honours</b>, achieving a GPA of 3.62</li>
+              <br>
+              <li>Attended the University of the West Indies for tertiary education</b></li>
+            </ul>
+            
           </div>
           <hr />
         </li>
@@ -187,9 +210,15 @@
             </svg>
           </div>
           <div class="timeline-start mb-10 md:text-end">
-            <time class="font-mono italic">2025 - Present</time>
+            <time class="font-mono italic">Sep 2025 - Present</time>
             <div class="text-lg font-black">Service Commissions Department</div>
-            job title goes here, work desc goes here.
+            <ul class="hidden md:block">
+              <li>Currently employed as a Systems Analyst at the Service Commissions Department, where I enable the analysis, design, and delivery of digital solutions. My responsibilities include conducting industry research to recommend appropriate technologies, and defining deliverables for vendor engagements. I also develop internal platforms and systems, to support the digitization of business processes, and produce technical presentations and documentation to guide stakeholders through digital transformation initiatives.</li>
+            </ul>
+
+            <ul class="md:hidden lg:hidden xl:hidden">
+              <li>Currently employed as a Systems Analyst at the Service Commissions Department, where I enable the analysis, design, and delivery of digital solutions.</li>
+            </ul>
           </div>
           <hr />
         </li>
@@ -206,9 +235,10 @@
 
         <div class="card project-card bg-base-200 min-h-64 shadow-md">
           <div class="card-body">
-            <h3 class="card-title">Predict Athlete</h3>
-            <p>Desc of predict athlete</p>
-
+            <h2 class="card-title">Predict Athlete Position</h2>
+            <br>
+            <p>A machine learning web application that analyses a user's physical attributes to predict their most suitable playing position. Built with a dataset of over 18,000 football players and presented at UWI FST Open Day 2025 to demonstrate ML-driven player evaluation.</p>
+            <br>
             <div class="card-actions justify-end">
               <a href="predictAthlete.html" class="btn btn-primary">
                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -222,9 +252,15 @@
 
         <div class="card project-card bg-base-200 min-h-64 shadow-md">
           <div class="card-body">
-            <h3 class="card-title">Student Conduct Tracker</h3>
-            <p>Desc of predict athlete</p>
-
+            <h2 class="card-title">Student Conduct Tracker</h2>
+            <br>
+            <!-- <p>A full-stack platform for academic staff to collaboratively monitor and assess student behavior, featuring reviews,  threaded comments and replies, karma scoring, and engagement mechanisms.</p> -->
+            
+            <p>A full-stack platform where academic staff can log, review, and discuss student 
+              behavior. Featuring threaded comments, karma-based scoring, and a collaborative 
+              feed to track conduct over time.
+            </p>
+            <br>
             <div class="card-actions justify-end">
               <a href="studentConductTracker.html" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -237,9 +273,13 @@
 
         <div class="card project-card bg-base-200 min-h-64 shadow-md">
           <div class="card-body">
-            <h3 class="card-title">E-commerce Website</h3>
-            <p>Desc of predict athlete</p>
-
+            <h2 class="card-title">E-commerce Website</h2>
+            <br>
+            <!-- <p>Built a fully functional e-commerce platform simulating real-world shopping experiences, with responsive design, secure authentication, and integrated Stripe payments.</p> -->
+            <p>A full-stack e-commerce platform with a product catalogue, shopping cart, 
+              order management, and integrated Stripe payments.
+            </p>
+            <br>
             <div class="card-actions justify-end">
               <a href="webStore.html" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -253,9 +293,17 @@
 
         <div class="card project-card bg-base-200 min-h-64 shadow-md">
           <div class="card-body">
-            <h3 class="card-title">Exam Platform</h3>
-            <p>Desc of predict athlete</p>
-
+            <h2 class="card-title">Exam Platform</h2>
+            <br>  
+            
+            <!-- <p>An assessment platform which allows administrative users to schedule assessments, create questions and exam layouts, create or import questions. Allows candidate users to take exams, in-spite of lost connections and save their progress throughout. The platform also handles automatic grading and integration with an analytics dashboard for user and platform analysis.</p> -->
+            <p>An assessment platform built for evaluating potential employees. Administrators can schedule exams and build question 
+              papers directly in the platform, while candidates benefit from offline-resilient 
+              sessions where answers are cached locally as they go, so a dropped connection won't 
+              cost them their progress. Results are auto-graded and feed into an analytics 
+              dashboard for reporting and review.
+            </p>
+            <br>
             <div class="card-actions justify-end">
               <a href="examPlatform.html" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -269,9 +317,14 @@
 
         <div class="card project-card bg-base-200 min-h-64 shadow-md">
           <div class="card-body">
-            <h3 class="card-title">Exam Platform Dashboard</h3>
-            <p>Desc of predict athlete</p>
-
+            <h2 class="card-title">Exam Platform Dashboard</h2>
+            <br>  
+            <!-- <p>A comprehensive analytics dashboard for the Exam Platform, providing insights into user performance and platform usage.</p> -->
+            <p>An analytics dashboard built alongside the Exam Platform, giving administrators 
+              a visual breakdown of candidate performance, exam completion rates, and platform 
+              usage trends.
+            </p>
+            <br>
             <div class="card-actions justify-end">
               <a href="examPlatformDashboard.html" class="btn btn-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -284,8 +337,6 @@
         </div>
 
 
-
-
       </div>
     </section>
 
@@ -293,10 +344,10 @@
     <br>
     <section class="skills py-10">
       <h2 class="text-3xl font-bold mb-4">Skills</h2>
-      <p class="text-lg text-base-content/70 mb-6">Technologies I work with:</p>
+      <p class="text-lg text-base-content/70 mb-6">Technologies I've built with:</p>
 
       <div class="flex flex-wrap justify-center gap-6">
-      <!-- <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-9 gap-2"> -->
+
 
         <div class="tooltip" data-tip="Flask">
           <a href="#!"
@@ -316,13 +367,13 @@
 
         
 
-        <!-- <div class="tooltip" data-tip="Java">
-          <a href="https://www.java.com/en/" target="_blank"
+        <div class="tooltip" data-tip="Java">
+          <a href="#!"
             class="btn btn-circle btn-lg bg-base-200 hover:bg-primary hover:text-primary-content transition duration-300 border-none">
             
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="w-8 h-8" alt="Java"/>
           </a>
-        </div> -->
+        </div>
 
         
 
@@ -404,6 +455,10 @@
 
       </div>
     </section>
+
+    <footer>
+        <p class="text-center text-base-content/60 mt-10 mb-4">© 2026 Tyrell Lewis. All rights reserved.</p>
+    </footer>
   </main>
  
   <!-- Theme toggle script -->
@@ -437,7 +492,7 @@
       });
     }, { threshold: 0.4 }); //How much of the element needs to be on screen to trigger the visbility
 
-    document.querySelectorAll('.timeline-start, .timeline-end, .project-card').forEach(el => {
+    document.querySelectorAll('.timeline-start, .timeline-end, .project-card, .btn-lg').forEach(el => {
       observer.observe(el);
     });
   </script>
